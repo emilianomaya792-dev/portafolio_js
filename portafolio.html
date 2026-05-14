@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio JS</title>
+    <link rel="stylesheet" href="mi_estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Portafolio JavaScript</h1>
+
+        <div class="datos">
+            <p><strong>Nombre:</strong> Emiliano Maya, Karla Valeria, Jose Maria</p>
+            <p><strong>Campus:</strong> Tu campus</p>
+            <p><strong>Docente:</strong> Nombre del docente</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="marquesina.html">Marquesina</a>
+    </nav>
+
+    <main>
+
+        <section class="contenido">
+            <h2>Bienvenido</h2>
+
+            <p>
+                Este portafolio muestra algunas prácticas realizadas
+                durante el aprendizaje inicial de HTML, CSS y JavaScript.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Marquesina</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #contenedor{
+            width: 100%;
+            overflow: hidden;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+
+        #mensaje{
+            position: relative;
+            left: 100%;
+            white-space: nowrap;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Proyecto Marquesina</h1>
+
+    <div id="contenedor">
+        <div id="mensaje">
+            Bienvenido a mi portafolio de JavaScript
+        </div>
+    </div>
+
+    <script>
+
+        let mensaje = document.getElementById("mensaje");
+        let posicion = window.innerWidth;
+
+        function mover(){
+
+            posicion--;
+
+            mensaje.style.left = posicion + "px";
+
+            if(posicion < -400){
+                posicion = window.innerWidth;
+            }
+
+        }
+
+        setInterval(mover, 5);
+
+    </script>
+
+</body>
+</html>
